@@ -8,13 +8,17 @@ app.listen(3000, () => {
 });
 
 app.get("/", (req, res, next) => {
-  svg2png(req.query.url, { width: 300, height: 400 })
-    .then((buffer) => {
-      var img = Buffer.from(buffer, "base64");
-      res.writeHead(200, {
-        "Content-Type": "image/png",
-      });
-      res.end(img);
-    })
-    .catch((e) => console.error(e));
+  if (req.query.url) {
+    svg2png(req.query.url, { width: 300, height: 400 })
+      .then((buffer) => {
+        var img = Buffer.from(buffer, "base64");
+        res.writeHead(200, {
+          "Content-Type": "image/png",
+        });
+        res.end(img);
+      })
+      .catch((e) => console.error(e));
+  } else {
+    res.json(["Error"]);
+  }
 });
