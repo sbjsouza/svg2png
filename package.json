@@ -1,0 +1,25 @@
+{
+  "name": "svg2png",
+  "version": "1.0.0",
+  "description": "An API to convert your svg content to PNG throught url",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pn": "^1.1.0",
+    "svg2png": "^4.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sbjsouza/svg2png.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sbjsouza/svg2png/issues"
+  },
+  "homepage": "https://github.com/sbjsouza/svg2png#readme"
+}
